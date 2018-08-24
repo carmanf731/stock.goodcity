@@ -180,7 +180,8 @@ workflows:
               - test_cases
         - www_build:
             requires:
-              - package_dependencies
+              - upload-coverage
+              # - package_dependencies
         - www-deploy:
             requires:
               - www_build
